@@ -35,22 +35,22 @@ const Header = () => {
     <Flex justify="space-between">
       <Flex align="center" gap="5px"> 
         <Image
-          width={30}
-          height={30}
+          width={50}
+          height={50}
           src="/assets/images/travelSee.svg"
           alt="SeyahatRehberim Logo"
         />
-        <Title level={5} style={{margin:0}}>Seyahat Rehberim</Title>
+        <Title level={3} style={{margin:0}}>Seyahat Rehberim</Title>
       </Flex>
       <Flex>
         <Dropdown menu={{ items }} placement="bottomCenter">
-          <Button>
+          <Button  >
             <TbWorldSearch />
             <Divider type="vertical" />
             <Typography>{locale === "tr" ? "TR" : "ENG"}</Typography>
           </Button>
         </Dropdown>
-        <Button style={{ backgroundColor: "black", color: "#fff" }}>
+        <Button style={{ backgroundColor: "#dc0e42", color: "#fff" }} >
           <FormattedMessage id="header_login-button" />
         </Button>
       </Flex>
