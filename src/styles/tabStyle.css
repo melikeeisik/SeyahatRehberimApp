@@ -1,0 +1,19 @@
+.ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn span{
+    font-size: 20px;
+    font-weight: 500;
+}
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.ant-tabs-tab-btn:hover{
+    color: #595959;
+}
+.ant-tabs-tab-btn:focus,
+.ant-tabs-tab-btn:active {
+  color: black; 
+}
+.ant-tabs-ink-bar {
+    background: black !important; /* Aktif tabın altındaki border rengi */
+}
