@@ -1,4 +1,9 @@
 {
-    "home_where" : "Where",
+    "home_title-where" : "Where ?",
+    "home_title-activites" : "Join fun activities",
+    "home_title-dishes":"Try favorite dishes",
+    "home-tab1_placeholder":"Discover places to visit, activities to do, and various dishes to try",
+    "home-tab2_placeholder": "Explore places to visit, activities to do, and events",
+    "home-tab3_placeholder" : "Discover favorite restaurants and various dishes",
     "header_login-button" : "Login"
 }

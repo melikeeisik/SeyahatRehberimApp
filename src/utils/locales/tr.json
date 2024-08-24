@@ -1,4 +1,9 @@
 {
-    "home_where" : "Nereye",
+    "home_title-where" : "Nereye ?",
+    "home_title-activites" : "Eğlenceli aktivitelere katılın",
+    "home_title-dishes":"Favori yemekleri deneyin",
+    "home-tab1_placeholder":"Gezilecek yerler, yapılacak aktiviteler ve çeşitli yemekleri keşfet ",
+    "home-tab2_placeholder": "Gezilecek yerler, yapılacak aktiviteler ve etkinlikeri keşfet",
+    "home-tab3_placeholder" : "Favori restoran ve çeşitli yemekleri keşfet",
     "header_login-button" : "Giriş Yap"
 }
