@@ -7,10 +7,14 @@ import { IoRestaurantOutline } from "react-icons/io5";
 import { IoSearchOutline } from 'react-icons/io5'
 import { useIntl } from 'react-intl';
 import { getLocalesText } from "../utils/getLocalesText"
+import type { GetProps } from 'antd';
 import "../styles/searchPage.css";
+
+type SearchProps = GetProps<typeof Input.Search>;
 
 const Search = () => {
   const { Title } = Typography;
+  const { Search } = Input;
   const intl = useIntl();
   const [inputPlaceholder, setInputPlaceholder] = useState<string>("home-tab1_placeholder")
   const [title, setTitle] = useState<string>("home_title-where")
@@ -24,7 +28,6 @@ const Search = () => {
       case '2':
         setTitle("home_title-activites")
         setInputPlaceholder("home-tab2_placeholder")
-
         break;
       case '3':
         setTitle("home_title-dishes")
@@ -35,6 +38,9 @@ const Search = () => {
         setInputPlaceholder("home-tab1_placeholder")
     }
   }
+
+const onSearch: SearchProps['onSearch'] = (value, _e, info) => console.log(info?.source, value);
+
   return (
     <Flex align="center" vertical>
       <Title style={{ fontWeight: "bold", fontSize:"60px" }}>
@@ -62,7 +68,7 @@ const Search = () => {
           },
         ]}
       />
-      <Input size="large" placeholder={getLocalesText(intl, inputPlaceholder)} prefix={<IoSearchOutline />}className="ant-input-affix-wrapper"/>
+      <Search size="large" placeholder={getLocalesText(intl, inputPlaceholder)} prefix={<IoSearchOutline />} enterButton="Search" onSearch={onSearch} />
     </Flex>
   );
 };

@@ -6,7 +6,7 @@ import { TbWorldSearch } from "react-icons/tb";
 import type { MenuProps } from "antd";
 import Image from "next/image";
 import { useLocale } from "../contexts/IntlContext";
-
+import "../styles/header.css"
 const Header = () => {
   const { Title } = Typography;
   const intl = useIntl();
@@ -50,9 +50,11 @@ const Header = () => {
             <Typography>{locale === "tr" ? "TR" : "ENG"}</Typography>
           </Button>
         </Dropdown>
-        <Button style={{ backgroundColor: "#dc0e42", color: "#fff" }} >
-          <FormattedMessage id="header_login-button" />
-        </Button>
+        <Flex className="button">
+          <Button className="button" >
+            <FormattedMessage id="header_login-button" />
+          </Button>
+        </Flex>
       </Flex>
     </Flex>
   );
