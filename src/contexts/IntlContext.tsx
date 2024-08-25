@@ -1,8 +1,8 @@
 "use client"
 import React, { useState, createContext, useContext, ReactNode } from 'react';
 import { IntlProvider } from 'react-intl';
-import enMessages from '../utils/locales/en.json';
-import trMessages from '../utils/locales/tr.json';
+import enMessages from '@/utils/locales/en.json';
+import trMessages from '@/utils/locales/tr.json';
 
 interface IntlProviderWrapperProps {
   children: ReactNode;

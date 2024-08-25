@@ -1,14 +1,13 @@
 import { Flex, Typography, Tabs ,Input} from "antd";
 import React, { useState } from "react";
-import { FormattedMessage } from "react-intl";
 import { RiHomeLine } from "react-icons/ri";
 import { MdOutlineLocalActivity } from "react-icons/md";
 import { IoRestaurantOutline } from "react-icons/io5";
 import { IoSearchOutline } from 'react-icons/io5'
 import { useIntl } from 'react-intl';
-import { getLocalesText } from "../utils/getLocalesText"
+import { getLocalesText } from "@/utils/getLocalesText"
 import type { GetProps } from 'antd';
-import "../styles/searchPage.css";
+import "@/styles/searchPage.css";
 
 type SearchProps = GetProps<typeof Input.Search>;
 
@@ -39,7 +38,7 @@ const Search = () => {
     }
   }
 
-const onSearch: SearchProps['onSearch'] = (value, _e, info) => console.log(info?.source, value);
+  const onSearch: SearchProps['onSearch'] = (value, _e, info) => console.log("basıldı");
 
   return (
     <Flex align="center" vertical>

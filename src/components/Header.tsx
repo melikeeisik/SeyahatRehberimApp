@@ -1,15 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Button, Flex, Typography, Divider, Dropdown } from "antd";
 import { FormattedMessage, useIntl } from "react-intl";
 import { TbWorldSearch } from "react-icons/tb";
 import type { MenuProps } from "antd";
 import Image from "next/image";
-import { useLocale } from "../contexts/IntlContext";
-import "../styles/header.css"
+import { useLocale } from "@/contexts/IntlContext";
+import { usePopUp } from '@/contexts/PopUpContext'
+import { PopUpType } from "@/enums/PopUpEnums";
+import "@/styles/header.css"
 const Header = () => {
   const { Title } = Typography;
-  const intl = useIntl();
+  const {setShowPopUp,setPopUpType } = usePopUp();
   const { locale, setLocale } = useLocale();
 
   const items: MenuProps["items"] = [
@@ -32,7 +34,7 @@ const Header = () => {
   ];
 
   return (
-    <Flex justify="space-between">
+    <Flex justify="space-between" >
       <Flex align="center" gap="5px"> 
         <Image
           width={50}
@@ -42,8 +44,8 @@ const Header = () => {
         />
         <Title level={3} style={{margin:0}}>Seyahat Rehberim</Title>
       </Flex>
-      <Flex>
-        <Dropdown menu={{ items }} placement="bottomCenter">
+      <Flex gap="5px">
+        <Dropdown menu={{ items }} placement="bottom">
           <Button  >
             <TbWorldSearch />
             <Divider type="vertical" />
@@ -51,7 +53,7 @@ const Header = () => {
           </Button>
         </Dropdown>
         <Flex className="button">
-          <Button className="button" >
+          <Button onClick={() => {setShowPopUp(true), setPopUpType(PopUpType.login)}}>
             <FormattedMessage id="header_login-button" />
           </Button>
         </Flex>
