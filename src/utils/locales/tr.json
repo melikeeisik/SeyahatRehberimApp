@@ -8,10 +8,20 @@
     "header_login-button" : "Giriş Yap",
 
     "login-title" : "Gezilecek yerleri keşfetmek için giriş yapın",
-    "login-username" : "Kullanıcı adı",
+    "login-username" : "E-posta adresi",
     "login-password" : "Parola",
     "login-button" : "Giriş yap",
     "login-divider" : "Üye değil misiniz ?",
     "login-link_text" : "Seyehat Rehberimin en iyilerine erişmek için",
-    "login-link_link" : "üye olun"
+    "login-link_link" : "üye olun",
+
+    "signup-title" : "Seyehat Rehberimin en iyilerine erişmek için üye olun",
+    "signup-name" : "Ad",
+    "signup-surname" : "Soyad",
+    "signup-username" : "E-posta adresi",
+    "signup-password" : "Parola",
+    "signup-button" : "Hesap oluştur",
+    "signup-divider" : "Hesabınız zaten var mı?",
+    "signup-link_text" : "Lütfen Seyahat Rehmberim hesabınıza",
+    "signup-link_link" : "giriş yapın"
 }

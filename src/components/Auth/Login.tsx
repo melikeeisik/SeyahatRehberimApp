@@ -3,13 +3,14 @@ import Image from "next/image";
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import { useIntl } from 'react-intl';
-import Link from "next/link";
 import { getLocalesText } from "@/utils/getLocalesText"
 import "@/styles/login.css";
+import { usePopUp } from "@/contexts/PopUpContext";
 
 const Login = () => {
   const { Title } = Typography;
   const intl = useIntl();
+  const {setPopUpType} = usePopUp();
   return (
     <Flex vertical className="login" align="start">
       <Image
@@ -22,8 +23,8 @@ const Login = () => {
       <Flex className="form">
         <form className="form">
           <Flex className="inputBox">
-            <Typography><FormattedMessage id="login-username" /></Typography>
-            <Input className="input" size="large" placeholder={getLocalesText(intl, "login-username")} />
+            <Typography><FormattedMessage id="login-email" /></Typography>
+            <Input className="input" type="email" size="large" placeholder={getLocalesText(intl, "login-email")} />
           </Flex>
           <Flex className="inputBox">
             <Typography><FormattedMessage id="login-password" /></Typography>
@@ -37,7 +38,7 @@ const Login = () => {
           <Button><FormattedMessage id="login-button" /></Button>
         </form>
         <Divider plain><FormattedMessage id="login-divider" /></Divider>
-        <Typography className="link">{getLocalesText(intl, "login-link_text")} <Link href="http://localhost:3000/">{getLocalesText(intl, "login-link_link")}</Link></Typography>
+        <Typography className="link">{getLocalesText(intl, "login-link_text")} <Typography onClick={() => setPopUpType("signup")}>{getLocalesText(intl, "login-link_link")}</Typography></Typography>
       </Flex>
     </Flex>
   );

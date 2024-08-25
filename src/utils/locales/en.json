@@ -8,11 +8,21 @@
     "header_login-button" : "Login",
 
     "login-title" : "Log in to explore places to visit",
-    "login-username" : "Username",
+    "login-email" : "E-mail address",
     "login-password" : "Password",
     "login-button" : "Login",
     "login-divider" : "Not a member?",
     "login-link_text" : "Access the best of Seyahat Rehberim by",
-    "login-link_link" : "joining"
+    "login-link_link" : "joining",
+
+    "signup-title" : "Access the best of Seyahat Rehberim by joining",
+    "signup-name" : "Name",
+    "signup-surname" : "Surname",
+    "signup-email" : "E-mail address",
+    "signup-password" : "Password",
+    "signup-button" : "Create an account",
+    "signup-divider" : "Do you already have an account?",
+    "signup-link_text" : "Please log in to your Seyahat Rehberim",
+    "signup-link_link" : "account"
 
 }
