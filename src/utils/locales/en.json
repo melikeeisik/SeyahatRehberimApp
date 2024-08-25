@@ -5,5 +5,14 @@
     "home-tab1_placeholder":"Discover places to visit, activities to do, and various dishes to try",
     "home-tab2_placeholder": "Explore places to visit, activities to do, and events",
     "home-tab3_placeholder" : "Discover favorite restaurants and various dishes",
-    "header_login-button" : "Login"
+    "header_login-button" : "Login",
+
+    "login-title" : "Log in to explore places to visit",
+    "login-username" : "Username",
+    "login-password" : "Password",
+    "login-button" : "Login",
+    "login-divider" : "Not a member?",
+    "login-link_text" : "Access the best of Seyahat Rehberim by",
+    "login-link_link" : "joining"
+
 }

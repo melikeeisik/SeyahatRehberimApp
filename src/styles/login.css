@@ -1,9 +1,6 @@
 .login{
-    background-color: #ffff;
     width: 450px;
     height: 600px;
-    border-radius: 10px;
-    padding: 50px;
 }
 .form{
     display: flex;

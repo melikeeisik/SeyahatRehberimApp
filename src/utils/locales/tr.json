@@ -5,5 +5,13 @@
     "home-tab1_placeholder":"Gezilecek yerler, yapılacak aktiviteler ve çeşitli yemekleri keşfet ",
     "home-tab2_placeholder": "Gezilecek yerler, yapılacak aktiviteler ve etkinlikeri keşfet",
     "home-tab3_placeholder" : "Favori restoran ve çeşitli yemekleri keşfet",
-    "header_login-button" : "Giriş Yap"
+    "header_login-button" : "Giriş Yap",
+
+    "login-title" : "Gezilecek yerleri keşfetmek için giriş yapın",
+    "login-username" : "Kullanıcı adı",
+    "login-password" : "Parola",
+    "login-button" : "Giriş yap",
+    "login-divider" : "Üye değil misiniz ?",
+    "login-link_text" : "Seyehat Rehberimin en iyilerine erişmek için",
+    "login-link_link" : "üye olun"
 }

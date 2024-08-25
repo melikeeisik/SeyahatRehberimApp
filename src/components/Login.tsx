@@ -1,20 +1,15 @@
 import { Flex, Typography, Input, Button,Divider } from "antd";
 import Image from "next/image";
 import React from "react";
-import { useFormik } from "formik";
-import "@/styles/login.css";
+import { FormattedMessage } from "react-intl";
+import { useIntl } from 'react-intl';
 import Link from "next/link";
+import { getLocalesText } from "@/utils/getLocalesText"
+import "@/styles/login.css";
+
 const Login = () => {
   const { Title } = Typography;
-  const formik = useFormik({
-    initialValues: {
-      userName: "",
-      password: "",
-    },
-    onSubmit: (values) => {
-      console.log(values);
-    },
-  });
+  const intl = useIntl();
   return (
     <Flex vertical className="login" align="start">
       <Image
@@ -23,26 +18,26 @@ const Login = () => {
         src="/assets/images/travelSee.svg"
         alt="SeyahatRehberim Logo"
       />
-      <Title level={2}>Gezilecek yerleri keşfetmek için giriş yapın</Title>
+      <Title level={2}><FormattedMessage id="login-title"/></Title>
       <Flex className="form">
         <form className="form">
           <Flex className="inputBox">
-            <Typography>Kullanıcı adı</Typography>
-            <Input className="input" size="large" placeholder="Kullanıcı adı" />
+            <Typography><FormattedMessage id="login-username" /></Typography>
+            <Input className="input" size="large" placeholder={getLocalesText(intl, "login-username")} />
           </Flex>
           <Flex className="inputBox">
-            <Typography>Parola</Typography>
+            <Typography><FormattedMessage id="login-password" /></Typography>
             <Input
               type="password"
               className="input"
               size="large"
-              placeholder="Parola"
+              placeholder={getLocalesText(intl, "login-password")} 
             />
           </Flex>
-          <Button>Giriş yap</Button>
+          <Button><FormattedMessage id="login-button" /></Button>
         </form>
-        <Divider plain>Üye değil misiniz?</Divider>
-        <Typography className="link">Seyehat Rehberimin en iyilerine erişmek için <Link href="http://localhost:3000/">üye olun</Link></Typography>
+        <Divider plain><FormattedMessage id="login-divider" /></Divider>
+        <Typography className="link">{getLocalesText(intl, "login-link_text")} <Link href="http://localhost:3000/">{getLocalesText(intl, "login-link_link")}</Link></Typography>
       </Flex>
     </Flex>
   );

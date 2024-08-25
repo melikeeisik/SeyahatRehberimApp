@@ -10,3 +10,16 @@
     justify-content: center;
     align-items: center;
 }
+.popUpBox{
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 50px;
+    position: relative;
+}
+.popUpBox svg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    padding: 20px;
+}
