@@ -46,14 +46,14 @@ const Header = () => {
       </Flex>
       <Flex gap="5px">
         <Dropdown menu={{ items }} placement="bottom">
-          <Button  >
+          <Button size="large" >
             <TbWorldSearch />
             <Divider type="vertical" />
             <Typography>{locale === "tr" ? "TR" : "ENG"}</Typography>
           </Button>
         </Dropdown>
         <Flex className="button">
-          <Button onClick={() => {setShowPopUp(true), setPopUpType(PopUpType.login)}}>
+          <Button size="large"  onClick={() => {setShowPopUp(true), setPopUpType(PopUpType.login)}}>
             <FormattedMessage id="header_login-button" />
           </Button>
         </Flex>
